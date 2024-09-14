@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 
 
-# lasso_model = joblib.load(r'A:\DAIICT_sem1\Used_car_Price_prediction\Streamlit\lasso_model.pkl')
+lasso_model = joblib.load(r'A:\DAIICT_sem1\Used_car_Price_prediction\Streamlit\lasso_model.pkl')
 
 
 # Load the Lasso model
@@ -95,7 +95,7 @@ feature_dict[f'Manufacturing_year_{manufacturing_year}'] = 1
 # Convert the dictionary to a numpy array for prediction
 features = np.array([list(feature_dict.values())])
 
-# # Predict button
-# if st.button('Predict Car Price'):
-#     prediction = lasso_model.predict(features)[0]
-#     st.success(f'The predicted price for the car is: ₹{int(prediction):,}')
+# Predict button
+if st.button('Predict Car Price'):
+    prediction = lasso_model.predict(features)[0]
+    st.success(f'The predicted price for the car is: ₹{int(prediction):,}')
