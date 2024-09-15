@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 
 
-lasso_model = joblib.load(r'https://drive.google.com/file/d/1gqzUeJPPj0I7ByheIcQBnEi1nV60ochx/view?usp=drive_link')
+lasso_model = joblib.load(r'A:\DAIICT_sem1\Used_car_Price_prediction\Streamlit\lasso_model.pkl')
 
 
 # Load the Lasso model
